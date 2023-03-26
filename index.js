@@ -6,7 +6,9 @@ const { auth } = require("./middleware/note.middleware");
 const cors = require("cors");
 
 require("dotenv").config();
-
+app.get("/",(req,res)=>{
+    res.send("home page")
+})
 
 const app = express();
 app.use(cors());
