@@ -5,12 +5,15 @@ const {noteRoute}=require("./route/note.route");
 const { auth } = require("./middleware/note.middleware");
 const cors = require("cors");
 
+
+
+const app = express();
+
 require("dotenv").config();
 app.get("/",(req,res)=>{
     res.send("home page")
 })
 
-const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/user",userRouter);
