@@ -10,9 +10,7 @@ const cors = require("cors");
 const app = express();
 
 require("dotenv").config();
-app.get("/",(req,res)=>{
-    res.send("home page")
-})
+
 
 app.use(cors());
 app.use(express.json());
